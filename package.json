@@ -1,0 +1,8 @@
+{
+  "name": "@c7s/http-errors",
+  "version": "0.0.1",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "class-validator": "0.8.1"
+  }
+}
