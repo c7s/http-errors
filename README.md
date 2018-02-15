@@ -15,4 +15,15 @@ Response:
 
 ```
 
-* 422 request payload validation error
+## HTTP code 422 request payload validation error
+
+Response:
+```json
+{
+  "code": "Validation",
+  "validationErrors": {
+    "field": ["Field is required", "Value must be integer"]
+  }
+}
+
+```
