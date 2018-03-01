@@ -2,7 +2,15 @@
   "name": "@c7s/http-errors",
   "version": "0.0.1",
   "license": "UNLICENSED",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "compile": "./node_modules/.bin/tsc"
+  },
   "dependencies": {
     "class-validator": "0.8.1"
+  },
+  "devDependencies": {
+    "typescript": "2.7.1"
   }
 }
