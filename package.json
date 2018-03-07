@@ -8,7 +8,7 @@
     "compile": "./node_modules/.bin/tsc"
   },
   "dependencies": {
-    "class-validator": "0.8.1"
+    "class-validator": "0.7.3"
   },
   "devDependencies": {
     "typescript": "2.7.2"
