@@ -1,5 +1,5 @@
 import { BadRequestError } from './BadRequestError';
-import { CvValidationError } from './CvValidationError';
+import { ClassValidatorError } from './ClassValidatorError';
 import { ForbiddenError } from './ForbiddenError';
 import { HttpError } from './HttpError';
 import { InternalServerError } from './InternalServerError';
@@ -8,7 +8,7 @@ import { ValidationError } from './ValidationError';
 
 export {
   BadRequestError,
-  CvValidationError,
+  ClassValidatorError,
   ForbiddenError,
   HttpError,
   InternalServerError,
