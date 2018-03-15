@@ -4,7 +4,7 @@ import { ForbiddenError } from './ForbiddenError';
 import { HttpError } from './HttpError';
 import { InternalServerError } from './InternalServerError';
 import { NotFoundError } from './NotFoundError';
-import { ValidationError } from './ValidationError';
+import { ValidationError, FieldValidationError, ValidationErrorItems } from './ValidationError';
 
 export {
   BadRequestError,
@@ -14,4 +14,6 @@ export {
   InternalServerError,
   NotFoundError,
   ValidationError,
+  FieldValidationError,
+  ValidationErrorItems,
 };
