@@ -1,8 +1,8 @@
 import { HttpError, ErrorData } from './HttpError';
-export declare type ValidationErrorItem = string[];
-export declare type ValidationErrorItems = {
-    [property: string]: ValidationErrorItem;
+export declare type FieldValidationError = {
+    [property: string]: string[] | FieldValidationError;
 };
+export declare type ValidationErrorItems = FieldValidationError | FieldValidationError[];
 export interface ValidationErrorData extends ErrorData {
     validationErrors: ValidationErrorItems;
 }

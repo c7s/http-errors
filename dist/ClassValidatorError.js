@@ -1,9 +1,11 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const ValidationError_1 = require("./ValidationError");
-class CvValidationError extends ValidationError_1.ValidationError {
-    constructor(errors = []) {
-        super(CvValidationError.createValidationErrors(errors));
+class ClassValidatorError extends ValidationError_1.ValidationError {
+    constructor(errors = [], envelopeName) {
+        super(undefined !== envelopeName
+            ? { [envelopeName]: ClassValidatorError.createValidationErrors(errors) }
+            : ClassValidatorError.createValidationErrors(errors));
     }
     static createValidationErrors(cvErrors) {
         let result;
@@ -13,8 +15,8 @@ class CvValidationError extends ValidationError_1.ValidationError {
         else {
             result = {};
             for (const error of cvErrors) {
-                const attribute = CvValidationError.extractErrorAttribute(error);
-                const messages = CvValidationError.extractErrorMessages(error);
+                const attribute = ClassValidatorError.extractErrorAttribute(error);
+                const messages = ClassValidatorError.extractErrorMessages(error);
                 result[attribute] = messages;
             }
         }
@@ -46,5 +48,5 @@ class CvValidationError extends ValidationError_1.ValidationError {
         return result;
     }
 }
-exports.CvValidationError = CvValidationError;
-//# sourceMappingURL=CvValidationError.js.map
+exports.ClassValidatorError = ClassValidatorError;
+//# sourceMappingURL=ClassValidatorError.js.map
