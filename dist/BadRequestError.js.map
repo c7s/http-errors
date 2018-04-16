@@ -1,1 +1,1 @@
-{"version":3,"file":"BadRequestError.js","sourceRoot":"","sources":["../src/BadRequestError.ts"],"names":[],"mappings":";;AAAA,2CAAwC;AAExC,qBAA6B,SAAQ,qBAAS;IAC5C,IAAW,IAAI;QACb,MAAM,CAAC,GAAG,CAAC;IACb,CAAC;CACF;AAJD,0CAIC"}
+{"version":3,"file":"BadRequestError.js","sourceRoot":"","sources":["../src/BadRequestError.ts"],"names":[],"mappings":";;AAAA,2CAAwC;AAExC,qBAA6B,SAAQ,qBAAS;IAC5C,IAAW,IAAI;QACb,OAAO,GAAG,CAAC;IACb,CAAC;CACF;AAJD,0CAIC"}
