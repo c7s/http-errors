@@ -10,7 +10,12 @@ class ClassValidatorError extends ValidationError_1.ValidationError {
     static createValidationErrors(cvErrors) {
         let result;
         if (this.isArrayErrors(cvErrors)) {
-            result = cvErrors.map(error => this.createValidationErrors(error.children));
+            result = [];
+            for (const error of cvErrors) {
+                const attribute = Number(ClassValidatorError.extractErrorAttribute(error));
+                const messages = this.createValidationErrors(error.children);
+                result[attribute] = messages;
+            }
         }
         else {
             result = {};
@@ -23,14 +28,7 @@ class ClassValidatorError extends ValidationError_1.ValidationError {
         return result;
     }
     static isArrayErrors(errors) {
-        let result = true;
-        let error;
-        const n = errors.length;
-        for (let i = 0; result && i < n; i += 1) {
-            error = errors[i];
-            result = !isNaN(error.property);
-        }
-        return result;
+        return errors.every(error => !isNaN(error.property));
     }
     static extractErrorAttribute(error) {
         return error.property;

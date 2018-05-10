@@ -6,8 +6,8 @@ export class ClassValidatorError extends ValidationError {
   constructor(errors: ClassValidatorValidationError[] = [], envelopeName?: string) {
     super(
       undefined !== envelopeName
-      ? <FieldValidationError>{ [envelopeName]: ClassValidatorError.createValidationErrors(errors) }
-      : ClassValidatorError.createValidationErrors(errors),
+        ? <FieldValidationError>{ [envelopeName]: ClassValidatorError.createValidationErrors(errors) }
+        : ClassValidatorError.createValidationErrors(errors),
     );
   }
 
@@ -15,8 +15,12 @@ export class ClassValidatorError extends ValidationError {
     ValidationErrorItems {
     let result: ValidationErrorItems;
     if (this.isArrayErrors(cvErrors)) {
-      result = cvErrors.map(error =>
-        <FieldValidationError>this.createValidationErrors(error.children));
+      result = [];
+      for (const error of cvErrors) {
+        const attribute = Number(ClassValidatorError.extractErrorAttribute(error));
+        const messages = <FieldValidationError>this.createValidationErrors(error.children);
+        result[attribute] = messages;
+      }
     } else {
       result = {};
       for (const error of cvErrors) {
@@ -29,14 +33,7 @@ export class ClassValidatorError extends ValidationError {
   }
 
   protected static isArrayErrors(errors: ClassValidatorValidationError[]): boolean {
-    let result = true;
-    let error;
-    const n = errors.length;
-    for (let i = 0; result && i < n; i += 1) {
-      error = errors[i];
-      result = !isNaN(<any>error.property);
-    }
-    return result;
+    return errors.every(error => !isNaN(error.property as any));
   }
 
   protected static extractErrorAttribute(error: ClassValidatorValidationError): string {
