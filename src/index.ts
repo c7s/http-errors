@@ -1,5 +1,6 @@
 import { BadRequestError } from './BadRequestError';
 import { ClassValidatorError } from './ClassValidatorError';
+import { ConflictError } from './ConflictError';
 import { EntityTooLargeError } from './EntityTooLargeError';
 import { ForbiddenError } from './ForbiddenError';
 import { HttpError } from './HttpError';
@@ -10,6 +11,7 @@ import { ValidationError, FieldValidationError, ValidationErrorItems } from './V
 export {
   BadRequestError,
   ClassValidatorError,
+  ConflictError,
   EntityTooLargeError,
   FieldValidationError,
   ForbiddenError,
