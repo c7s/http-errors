@@ -1,1 +1,1 @@
-{"version":3,"file":"EntityTooLargeError.js","sourceRoot":"","sources":["../src/EntityTooLargeError.ts"],"names":[],"mappings":";;AAAA,2CAAwC;AAExC,yBAAiC,SAAQ,qBAAS;IAChD,IAAW,IAAI;QACb,OAAO,GAAG,CAAC;IACb,CAAC;CACF;AAJD,kDAIC"}
+{"version":3,"file":"EntityTooLargeError.js","sourceRoot":"","sources":["../src/EntityTooLargeError.ts"],"names":[],"mappings":";;AAAA,2CAAwC;AAExC,MAAa,mBAAoB,SAAQ,qBAAS;IAChD,IAAW,IAAI;QACb,OAAO,GAAG,CAAC;IACb,CAAC;CACF;AAJD,kDAIC"}
