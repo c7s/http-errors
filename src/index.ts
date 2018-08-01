@@ -2,6 +2,7 @@ import { BadRequestError } from './BadRequestError';
 import { ClassValidatorError } from './ClassValidatorError';
 import { ConflictError } from './ConflictError';
 import { EntityTooLargeError } from './EntityTooLargeError';
+import { FailedDependencyError } from './FailedDependencyError';
 import { ForbiddenError } from './ForbiddenError';
 import { HttpError } from './HttpError';
 import { InternalServerError } from './InternalServerError';
@@ -13,6 +14,7 @@ export {
   ClassValidatorError,
   ConflictError,
   EntityTooLargeError,
+  FailedDependencyError,
   FieldValidationError,
   ForbiddenError,
   HttpError,
