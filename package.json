@@ -11,6 +11,6 @@
     "class-validator": "^0.8.1"
   },
   "devDependencies": {
-    "typescript": "3.0.1"
+    "typescript": "3.2.2"
   }
 }
