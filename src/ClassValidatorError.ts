@@ -6,7 +6,9 @@ export class ClassValidatorError extends ValidationError {
   constructor(errors: ClassValidatorValidationError[] = [], envelopeName?: string) {
     super(
       undefined !== envelopeName
-        ? <FieldValidationError>{ [envelopeName]: ClassValidatorError.createValidationErrors(errors) }
+        ? <FieldValidationError>{
+          [envelopeName]: ClassValidatorError.createValidationErrors(errors),
+        }
         : ClassValidatorError.createValidationErrors(errors),
     );
   }

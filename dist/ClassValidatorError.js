@@ -4,7 +4,9 @@ const ValidationError_1 = require("./ValidationError");
 class ClassValidatorError extends ValidationError_1.ValidationError {
     constructor(errors = [], envelopeName) {
         super(undefined !== envelopeName
-            ? { [envelopeName]: ClassValidatorError.createValidationErrors(errors) }
+            ? {
+                [envelopeName]: ClassValidatorError.createValidationErrors(errors),
+            }
             : ClassValidatorError.createValidationErrors(errors));
     }
     static createValidationErrors(cvErrors) {

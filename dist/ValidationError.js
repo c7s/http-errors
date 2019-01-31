@@ -16,7 +16,7 @@ class ValidationError extends HttpError_1.HttpError {
         return Object.assign({}, super.data, { validationErrors: this.validationErrors });
     }
     toString() {
-        return 'Validation error: ' + JSON.stringify(this.validationErrors);
+        return `Validation error: ${JSON.stringify(this.validationErrors)}`;
     }
 }
 exports.ValidationError = ValidationError;

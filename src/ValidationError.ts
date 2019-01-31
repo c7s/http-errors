@@ -34,7 +34,7 @@ export class ValidationError extends HttpError {
   }
 
   public toString() {
-    return 'Validation error: ' + JSON.stringify(this.validationErrors);
+    return `Validation error: ${JSON.stringify(this.validationErrors)}`;
   }
 
 }
