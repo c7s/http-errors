@@ -9,8 +9,8 @@ export interface ValidationErrorData extends ErrorData {
 export declare class ValidationError extends HttpError {
     protected readonly validationErrors: ValidationErrorItems;
     constructor(validationErrors: ValidationErrorItems);
-    readonly code: number;
-    protected readonly errorCode: string;
-    readonly data: ValidationErrorData;
+    get code(): number;
+    protected get errorCode(): string;
+    get data(): ValidationErrorData;
     toString(): string;
 }
