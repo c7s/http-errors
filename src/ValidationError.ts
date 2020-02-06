@@ -1,7 +1,7 @@
 import { HttpError, ErrorData } from './HttpError';
 
 export type FieldValidationError = {
-  [property: string]: string[] | FieldValidationError,
+  [property: string]: string[] | ValidationErrorItems,
 };
 
 export type ValidationErrorItems = FieldValidationError | FieldValidationError[];
