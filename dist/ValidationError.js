@@ -13,7 +13,7 @@ class ValidationError extends HttpError_1.HttpError {
         return 'Validation';
     }
     get data() {
-        return Object.assign({}, super.data, { validationErrors: this.validationErrors });
+        return Object.assign(Object.assign({}, super.data), { validationErrors: this.validationErrors });
     }
     toString() {
         return 'Validation error: ' + JSON.stringify(this.validationErrors);
